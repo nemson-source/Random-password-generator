@@ -42,7 +42,7 @@ const password = (num, specialChars, numbers, usage) => {
     const password = generateRandomPassword(num, specialChars, numbers);
     console.log(password);
     console.log('You can now copy your password. It is also saved in the file named password.txt');
-    fs.appendFile('password.txt', `usage: ${usage} password: ${password} made on: ${new Date()}\n\n`, (err) => {
+    fs.appendFile('password.txt', `usage: ${usage} password: ${password}\nmade on: ${new Date()}\n\n`, (err) => {
         if (err) throw err;
     });
     setTimeout(() => {
