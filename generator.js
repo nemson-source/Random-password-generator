@@ -37,8 +37,7 @@ const password = (num, specialChars, numbers, usage) => {
         }
         return password;
     }
-
-    // Example usage: generate a random password with length 12
+    
     const password = generateRandomPassword(num, specialChars, numbers);
     console.log(password);
     console.log('You can now copy your password. It is also saved in the file named password.txt');
