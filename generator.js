@@ -11,24 +11,29 @@ readline.question('', (num) => {
     console.log('Do you want to include special characters? (y/n)');
     readline.question('', (specialChars) => {
         console.log('Do you want to include numbers? (y/n)');
+        readline.question('', (specialChars) => {
+        console.log('Do you want to include capital letter? (y/n)');
         readline.question('', (numbers) => {
             console.log('Enter the usage for this password:');
             readline.question('', (usage) => {
-                password(num, specialChars, numbers, usage);
+                password(num, specialChars, numbers, capitalletter, usage);
                 readline.close();
             });
         });
     });
 });
 
-const password = (num, specialChars, numbers, usage) => {
-    function generateRandomPassword(length, useSpecialChars, useNumbers) {
-        let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const password = (num, specialChars, numbers, capitalletter, usage) => {
+    function generateRandomPassword(length, useSpecialChars, useNumbers, useCapitalletter) {
+        let charset = 'abcdefghijklmnopqrstuvwxyz';
         if (useSpecialChars === 'y') {
             charset += '!@#$%^&*()_+~`|}{[]:;?><,./-=';
         }
         if (useNumbers === 'y') {
             charset += '0123456789';
+        }
+        if (useCapitalletter === 'y') {
+            charset += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         }
         let password = '';
         for (let i = 0; i < length; i++) {
@@ -38,7 +43,7 @@ const password = (num, specialChars, numbers, usage) => {
         return password;
     }
     
-    const password = generateRandomPassword(num, specialChars, numbers);
+    const password = generateRandomPassword(num, specialChars, numbers, capitalletter);
     console.log(password);
     console.log('You can now copy your password. It is also saved in the file named password.txt');
     fs.appendFile('password.txt', `usage: ${usage} password: ${password}\nmade on: ${new Date()}\n\n`, (err) => {
