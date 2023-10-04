@@ -1,4 +1,4 @@
-# open-random-password-generator
+# Random password generator
 a simple node.js random-password-generator
 
 Step 1: Install Node.js
