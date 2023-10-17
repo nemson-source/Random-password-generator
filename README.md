@@ -5,7 +5,7 @@ Step 1: Install Node.js
 Make sure you have Node.js installed on your computer. If you don't have it installed, you can download it from the official Node.js website (https://nodejs.org/en/download/) and follow the installation instructions for your operating system.
 
 Step 2: Download the Release
-You can download the release from the GitHub repository. Navigate to the repository's release page (https://github.com/nemson-source/open-random-password-generator/releases) and download the release file (open-random-password-generator.zip) for your operating system.
+You can download the release from the GitHub repository. Navigate to the repository's release page (https://github.com/nemson-source/Random-password-generator/releases) and download the release file (open-random-password-generator.zip) for your operating system.
 
 Step 3: Extract the Release
 Extract the downloaded release file to a directory of your choice. This will create a folder containing the necessary files for the random password generator.
