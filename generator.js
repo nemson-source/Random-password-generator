@@ -37,7 +37,6 @@ const password = (num, specialChars, numbers, usage) => {
         }
         return password;
     }
-    
     const password = generateRandomPassword(num, specialChars, numbers);
     console.log(password);
     console.log('You can now copy your password. It is also saved in the file named password.txt');
