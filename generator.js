@@ -42,7 +42,6 @@ const password = (num, specialChars, numbers, usage) => {
     console.log('You can now copy your password. It is also saved in the file named password.txt');
     fs.appendFile('password.txt', `usage: ${usage} password: ${password}\nmade on: ${new Date()}\n\n`, (err) => {
         if (err) throw err;
-        console.log('error')
         console.log(err)
     });
     setTimeout(() => {
